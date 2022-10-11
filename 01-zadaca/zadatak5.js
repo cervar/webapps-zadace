@@ -15,3 +15,16 @@ let djels3 = (list) => {
   }
   
   djels3([1, 2, 3, 4, 5, 6, 7, 8, 9]) // 3, 6, 9
+
+  // novi kod
+
+  var numbers = [1, 2, 3, 4, 5, 6, 7];
+function djeli_s_3(numeros) {
+  var threes = [];
+  for(var i = 0; i < numeros.length; i++){
+    if(numeros[i]%3 == 0) threes.push(numeros[i]);
+  }
+  return threes;
+}
+var ok = djeli_s_3(numbers);
+djeli_s_3([1,2,3,4,5,6,7,8,9,10])  // 3, 6, 9
