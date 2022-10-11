@@ -13,3 +13,20 @@ let convertToHours = (minutes) => {
   console.log(convertToHours(44)) // 0 hrs, 44 mins
   console.log(convertToHours(60)) // 1 hrs, 0 mins
   
+
+  // novi kod
+
+  function broj_u_sate(num) { 
+    var hours = Math.floor(num / 60);  
+    var minutes = num % 60;
+    if (minutes + ''.length < 2) {
+      minutes = '0' + minutes; 
+    }
+    return hours + ":" + minutes;
+  }
+  
+  console.log(broj_u_sate(28));  //0:28
+  console.log(broj_u_sate(60));// 1:00
+  console.log(broj_u_sate(78));// 1:18
+  console.log(broj_u_sate(1562));// 26:2
+  console.log(broj_u_sate(15631));// 260:31
