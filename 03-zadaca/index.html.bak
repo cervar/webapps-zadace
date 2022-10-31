@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cha Josh</title>
+  </head>
+
+  <script>
+    function myFunction()
+    {
+      var un=document.forms["myForm"] ["Uname"].value;
+      var un=document.forms["myForm"] ["Pass"].value;
+      if(un=="dino" && pw=="1234")
+    {
+    window.location.href="index.html";
+    }
+    else 
+    {
+     alert("Invalid UserName and Password"); 
+    }
+    }
+  </script>
+  <body>
+
+ 
+
+      <input type="button" valute="pritisni"/>
+    <h1>Cha Josh</h1>
+    <form id="form">
+      <input type="text" class="input" id="input" placeholder="Upišite vaš zadatak" autocomplete="off">
+
+      <ul class="todos" id="todos"></ul>
+    </form>
+    <small>Lijeva tipka označuje završeni zadatak. <br> Desnom tipkom brišemo</small>
+
+    <script src="script.js"></script>
+  </body>
+</html>
