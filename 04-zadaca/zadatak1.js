@@ -29,6 +29,8 @@ console.log(datum);
 
 }
 app.get("/vratiObavijesti", (req, res) => {
+  var tempStorage =[]
+
     console.log(tempStorage)
     
     res.send(tempStorage)
@@ -54,8 +56,20 @@ app.post("/dodajObavijest", (req, res) => {
   })
 
 
-  app.patch("/izmijeniObavijest", (req, res) => {
+  app.patch("/izmijeniObavijest/:id", (req, res) => {
+    var { id } = req.params
+    console.log(id)
+    var { godine } = req.body
+
+    console.log(godine)
+    var user = tempStorage.find((x) => x.id  == id)
+
+    user.godine = godine
+    console.log(user)
+
+    res.send(tempStorage)
+
     
   })
 
-app.listen(port, () => console.log(`Works on port ${port}`))
+app.listen(port, () => console.log(`Works on port ${port}`)) 
