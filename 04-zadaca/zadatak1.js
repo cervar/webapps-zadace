@@ -52,20 +52,28 @@ app.post("/dodajObavijest", (req, res) => {
   })
 
   app.get("/vratiObavijest", (req, res) => {
-    
+    var oba;
+    var tempStorage = [];
+
+    for (i in obavjest){
+      oba =
+      obavjest[i].naziv + " "+ obavjest[i].sadrzaj + " "+ obavjest[i].datum;
+      tempStorage.push(obavjest);
+    }
+    res.send(tempStorage);
   })
 
 
   app.patch("/izmijeniObavijest/:id", (req, res) => {
     var { id } = req.params
     console.log(id)
-    var { godine } = req.body
+    var { sadrzaj } = req.body
 
-    console.log(godine)
-    var user = tempStorage.find((x) => x.id  == id)
+    console.log(sadrzaj)
+    var oba = tempStorage.find((x) => x.id  == id)
 
-    user.godine = godine
-    console.log(user)
+    oba.sadrzaj = sadrzaj
+    console.log(oba)
 
     res.send(tempStorage)
 
